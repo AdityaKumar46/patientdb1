@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('process.env.MONGO_URI');
+  await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://hospital:xWmfEwBnOJlgjpEg@cluster0.ipjyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 }
 const db = mongoose.connection;
 db.once('open', function() {
