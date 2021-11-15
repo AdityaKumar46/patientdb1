@@ -11,7 +11,7 @@ function ShowAll(props) {
     const [patient, setPatient] = useState([]);
 
     const getPatient = async () => {
-        const response = await fetch(`http://localhost:5000/api/auth/patient`, {
+        const response = await fetch(`/api/auth/patient`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

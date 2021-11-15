@@ -6,7 +6,7 @@ const AddPatient = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { name, birthday, gender, phone, email, occupation, proofId, patientNumber } = credential;
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch("/api/auth/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
